@@ -1,5 +1,5 @@
 import { SupabaseClient } from "@supabase/supabase-js";
-import { isString, isURL } from "class-validator";
+import { isString } from "class-validator";
 
 export class StorageError extends Error {
     constructor(objOrString: Partial<StorageError> | string) {
@@ -12,7 +12,7 @@ export class StorageError extends Error {
     }
 }
 
-export class ConvenientStorage {
+export class CStorage {
     constructor(public supabaseClient: SupabaseClient) {}
 
     getBucketName(): string | undefined {

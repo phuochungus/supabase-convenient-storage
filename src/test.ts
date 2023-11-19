@@ -1,5 +1,5 @@
 import { SupabaseClient } from "@supabase/supabase-js";
-import { ConvenientStorage } from "./index";
+import { CStorage } from "./index";
 import { readFileSync } from "fs";
 import { isURL } from "class-validator";
 
@@ -8,9 +8,7 @@ const supabaseClient = new SupabaseClient(
     process.env.SERVICE_KEY!
 );
 
-let storage: ConvenientStorage = new ConvenientStorage(
-    supabaseClient
-);
+let storage: CStorage = new CStorage(supabaseClient);
 
 test("init correctly", async () => {
     expect(supabaseClient).toBeDefined();
