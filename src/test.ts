@@ -70,11 +70,17 @@ test("copy file correctly", async () => {
     ).resolves.toBe("/dir/test2.txt");
 });
 
+test("list file correctly", async () => {
+    await expect(storage.listAllFiles("/dir")).resolves.toEqual([
+        "dir/test2.txt",
+    ]);
+});
+
 test("delete dir and file inside correctly", async () => {
-    expect(await storage.delete(["/dir"])).toEqual([
+    await expect(storage.delete(["/dir"])).resolves.toEqual([
         "/dir/test2.txt",
     ]);
-    expect(await storage.delete(["/test.txt"])).toEqual([
+    await expect(storage.delete(["/test.txt"])).resolves.toEqual([
         "/test.txt",
     ]);
 });

@@ -151,6 +151,7 @@ export class CStorage {
             throw new StorageError("Bucket name is not set");
 
         if (path[0] === "/") path = path.slice(1);
+
         let { data: list, error } = await this.supabaseClient.storage
             .from(this.BUCKET_NAME)
             .list(path);
