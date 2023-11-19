@@ -1,0 +1,34 @@
+{
+    "name": "supabase-convenient-storage",
+    "version": "1.0.0",
+    "description": "A package with addition functionality base on supabase storage",
+    "main": "./dist/index.js",
+    "scripts": {
+        "build": "tsup",
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/phuochungus/supabase-convenient-storage.git"
+    },
+    "author": "Nguyen Phuoc Hung",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/phuochungus/supabase-convenient-storage/issues"
+    },
+    "homepage": "https://github.com/phuochungus/supabase-convenient-storage#readme",
+    "dependencies": {
+        "@supabase/storage-js": "^2.5.4",
+        "@supabase/supabase-js": "^2.38.4",
+        "class-validator": "^0.14.0",
+        "dotenv": "^16.3.1"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.8",
+        "jest": "^29.7.0",
+        "ts-jest": "^29.1.1",
+        "ts-node": "^10.9.1",
+        "tsup": "^8.0.0",
+        "typescript": "^5.2.2"
+    }
+}
