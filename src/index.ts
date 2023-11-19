@@ -13,7 +13,7 @@ export class StorageError extends Error {
 }
 
 export class ConvenientStorage {
-    constructor(private supabaseClient: SupabaseClient) {}
+    constructor(public supabaseClient: SupabaseClient) {}
 
     getBucketName(): string | undefined {
         return this.BUCKET_NAME;
