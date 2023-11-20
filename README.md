@@ -2,6 +2,11 @@
 
 This package is a wrapper around Supabase storage-js
 
+To install, run:
+```
+$ npm i supabase-convenient-storage
+```
+
 To use, first create a class
 
 ```
